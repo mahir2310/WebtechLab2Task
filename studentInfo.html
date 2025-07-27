@@ -1,17 +1,121 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
-    <title>Student Information</title>
+    <meta charset="UTF-8">
+    <title>Student Profile</title>
+
+   
     <link rel="stylesheet" href="style.css">
 
+   
+    <style>
+        body {
+            background-color: #e6f2ff;
+            font-family: Verdana, sans-serif;
+        }
 
+        .profile-card {
+            width: 500px;
+            margin: 30px auto;
+            padding: 20px;
+            border: 2px solid #444;
+            background: #fff;
+            border-radius: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 15px;
+            object-fit: cover;
+            border: 2px solid #000;
+        }
+
+        .info {
+            text-align: center;
+        }
+
+        .info span {
+            font-weight: bold;
+        }
+
+        .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: orange;
+            padding: 5px 10px;
+            color: white;
+            border-radius: 5px;
+            z-index: 3;
+        }
+
+       
+        .edu-table {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .edu-table th, .edu-table td {
+            border: 1px solid #444;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .edu-table th {
+            background-color: #cce5ff;
+        }
+
+        .edu-table caption {
+            caption-side: top;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
-
-
 <body>
-    <h1 id="1" class="header">Student Information</h1>
 
+    <div class="profile-card">
+        
+        <div class="badge">Student</div>
+
+        
+        <img src="mahir.jpg" class="profile-pic" alt="Profile Picture">
+
+        
+        <div class="info">
+            <p><span>Name:</span> Sajid Hasan Mahir</p>
+            <p><span>Email:</span> sajidhasanmahir@gmail.com</p>
+            <p><span>Gender:</span> Male</p>
+            <p><span>Department:</span> CSE</p>
+            <p><span>Date of Birth:</span> 2003-01-01</p>
+        </div>
+
+        
+        <table class="edu-table">
+            <caption>Educational Background</caption>
+            <tr>
+                <th>Level</th>
+                <th>Institution</th>
+                <th>Result (GPA)</th>
+            </tr>
+            <tr>
+                <td>School</td>
+                <td>Chittagong Govt. High School</td>
+                <td>5.00</td>
+            </tr>
+            <tr>
+                <td>College</td>
+                <td>Dilwara Jahan Memorial College</td>
+                <td>5.00</td>
+            </tr>
+        </table>
+    </div>
 
 </body>
 </html>

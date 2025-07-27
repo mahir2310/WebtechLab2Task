@@ -1,46 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Student Registration</title>
     <link rel="icon" type="image/png" href="192favicon.png">
+
+   
+    <link rel="stylesheet" href="style.css">
+
+   
     <style>
-        .header1{
-            background-color: aqua;
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            width: 500px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border: 2px solid #333;
+            border-radius: 10px;
+            position: relative; 
+            z-index: 1;
+        }
+
+        h1 {
             text-align: center;
+        }
+
+        label {
+            display: inline-block;
+            width: 140px;
+            margin-bottom: 10px;
+        }
+
+        input, select {
+            width: 60%;
+            padding: 5px;
+        }
+
+        .note {
+            color: red;
+            font-size: 12px;
+        }
+
+        .button-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        
+        .overflow-box {
+            height: 50px;
+            overflow: auto;
+            background: #eee;
+            padding: 5px;
+            margin-bottom: 15px;
         }
     </style>
 </head>
 <body>
-    <h1 id="2" class="header1">Student Registration Form</h1>
-    <div><label style="color:black;" for="Studentname" >Studentname:</label>
-    <input type="text" id="Studentname" name="Studentname"><br>
-    <label style="color: red;" for="StudentID" >StudentID:</label>
-    <input type="text" id="StudentID" name="StudentID"><br>
-    <label style="color: red;" for="StudentBloodGRoup" >BloodGroup:</label>
-    <input type="text" id="StudentBloodGroup" name="BloodGroup"><br>
-    <label style="color: red;" for="Age" >Age:</label>
-    <input type="text" id="Age"  name="Age"><br>
-    <label for="dateofbirth">DateOfBirth:</label>
-    <input type="datetime-local" name="dateFObirth" id="dateOFbirth"> <br><br>
-    <label for="text"> Gender</label>
-    <select name="Gender" id="4">
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-    </select>
 
-    
-    <pre>                   <a href="studentInfo.html" target="_blank"><button>Submit</button></a></pre>
-    <a href="registration.html">
-    <pre>             <button>Reset</button></pre></a>
+    <div class="form-container">
+        <h1>Student Registration Form</h1>
+
+      
+        <div class="overflow-box">
+            <span>This is a sample note to demonstrate overflow if text exceeds the box height. You can scroll this area!</span>
+        </div>
+
+        
+        <form action="profile.html" method="get" enctype="multipart/form-data">
+            <label>Full Name:</label>
+            <input type="text" name="name" placeholder="Your name" required><br><br>
+
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="Your email"><br><br>
+
+           
+            <div style="margin-bottom: 15px; display: flex; align-items: center;">
+                <label style="width: 140px;">Gender:</label>
+                <div style="display: flex; gap: 30px;">
+                    <label style="display: flex; align-items: center; gap: 5px;">
+                        <input type="radio" name="gender" value="Male"> Male
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 5px;">
+                        <input type="radio" name="gender" value="Female"> Female
+                    </label>
+                </div>
+            </div>
 
 
-    
-    
 
 
+            <label>Department:</label>
+            <select name="department">
+                <option value="CSE">CSE</option>
+                <option value="EEE">EEE</option>
+                <option value="BBA">BBA</option>
+            </select><br><br>
 
+            <label>Date of Birth:</label>
+            <input type="date" name="dob"><br><br>
 
-    
+            <label>Upload Image:</label>
+            <input type="file" name="profile_pic" accept="image/*"><br><br>
+
+            <div class="button-group">
+                <input type="submit" value="Submit" style="background: green; color: white;"> <!-- inline CSS -->
+                <input type="reset" value="Reset" style="background: red; color: white;">
+            </div>
+        </form>
+    </div>
 </body>
 </html>

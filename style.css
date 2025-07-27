@@ -1,5 +1,10 @@
-.header{
-    color: magenta;
-    text-align: center;
-    background-color: aqua;
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+input, select {
+    border: 1px solid #aaa;
+    border-radius: 5px;
 }
